@@ -8,7 +8,7 @@ function App() {
 const [users, setUsers] = useState([])
 
 useEffect(()=>{
-  fetch('http://localhost:5000/users')
+  fetch('http://localhost:3000/users')
   .then(res=> res.json())
   .then(data=> {
      console.log(data)
@@ -24,7 +24,7 @@ const handleSubmit = event =>{
   const user = {name, email}
   console.log(user)
 
-  fetch('http://localhost:5000/users', {
+  fetch('http://localhost:3000/users', {
     method: 'POST',
     headers: {
       'content-type': 'application/json'

@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/users",
         element: <Database></Database> ,
-        loader: ()=>{ return fetch('http://localhost:5000/users')} ,
+        loader: ()=>{return fetch('http://localhost:3000/users')},
       },
     ]
   },
