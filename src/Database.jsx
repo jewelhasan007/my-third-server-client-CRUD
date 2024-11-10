@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Database = () => {
     const users = useLoaderData()
@@ -26,13 +26,14 @@ const handleDelete = _id =>{
 
     return (
         <div>
-            <h3 className="text-red-600">The database users are:{updateUsers.length}</h3>
+            <h3 className="text-red-600">The Total Users:{updateUsers.length}</h3>
             
             {
                 updateUsers.map(user => <p ><span className="font-bold">User Id: </span>{user._id} 
                 : <span className="font-bold ">User Name: </span>{user.name} 
                 : <span className="font-bold">User Email: </span>{user.email}
-                <button className="btn btn-error" type="button" onClick={()=>handleDelete(user._id)}>Delete</button>
+                <Link to={`/users/${user._id}`}><button className="btn btn-grey mx-3">Edit</button></Link>
+                <button className="btn btn-error mx-3" type="button" onClick={()=>handleDelete(user._id)}>Delete</button>
                 </p>)
             }
         </div>

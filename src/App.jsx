@@ -42,13 +42,7 @@ const handleSubmit = event =>{
 
   return (
     <>
-    <div >
-    <NavLink to="/">Home</NavLink>
-    <NavLink to="/users"> Users page</NavLink>
-    </div>
-   
-   
-    <h3>Home Page</h3>
+
    
    <div className="hero bg-base-200 min-h-screen">
   <div className="hero-content flex-col lg:flex-row-reverse">
@@ -77,7 +71,7 @@ const handleSubmit = event =>{
     </div>
   </div>
 </div>
-   <Outlet></Outlet>
+
     </>
   )
 }
